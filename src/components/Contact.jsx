@@ -19,25 +19,33 @@ export default function Contact() {
     const name = form.get("name")?.toString().trim() || "Portfolio visitor";
     const email = form.get("email")?.toString().trim();
     const message = form.get("message")?.toString().trim() || "No message provided.";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!emailPattern.test(email || "")) {
+      setStatus("error");
+      setFeedback("Please enter a valid email address so I can reply to you.");
+      return;
+    }
 
     setFeedback("");
     setStatus("sending");
 
     try {
+      const payload = new FormData();
+      payload.append("name", name);
+      payload.append("email", email);
+      payload.append("_replyto", email);
+      payload.append("message", message);
+      payload.append("_captcha", "false");
+      payload.append("_subject", `Portfolio inquiry from ${name}`);
+      payload.append("_template", "table");
+
       const response = await fetch("https://formsubmit.co/ajax/rakesh528yadav@gmail.com", {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          _captcha: "false",
-          _subject: `Portfolio inquiry from ${name}`,
-          _template: "table",
-        }),
+        body: payload,
       });
 
       if (!response.ok) {
@@ -49,7 +57,7 @@ export default function Contact() {
       setShowSuccess(true);
     } catch {
       setStatus("error");
-      setFeedback(`Message could not be sent right now. Please email ${profile.email} directly.`);
+      setFeedback(`Message could not be sent yet. If this is the first submission, confirm the FormSubmit activation email in ${profile.email}, then try again.`);
     }
   };
 
@@ -119,7 +127,17 @@ export default function Contact() {
             </label>
             <label className="field-label">
               Email
-              <input className="field-input" type="email" name="email" placeholder="you@example.com" required />
+              <input
+                className="field-input"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                autoComplete="email"
+                inputMode="email"
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                title="Enter a valid email address so I can reply to you."
+                required
+              />
             </label>
             <label className="field-label">
               Message
