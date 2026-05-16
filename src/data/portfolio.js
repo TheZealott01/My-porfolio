@@ -11,6 +11,7 @@ import {
   ChartNoAxesCombined,
   Code2,
   Database,
+  FileCode2,
   GraduationCap,
   HardDrive,
   Laptop,
@@ -33,12 +34,14 @@ const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 // Edit this file first when replacing links, projects, skills, certificates, and images.
 export const profile = {
   name: "Rakesh Yadav",
-  email: "ry443197@gmail.com",
+  email: "rakesh528yadav@gmail.com",
+  location: "Uttar Pradesh, India",
   role: "Network Security Engineer",
+  company: "iOPEX Technologies",
   image: asset("assets/profile-blazer.jpeg"),
   resume: asset("assets/rakesh-yadav-resume.pdf"),
   summary:
-    "Cybersecurity professional with a strong foundation in computer networks, Python, DSA, and secure operations. I combine hands-on firewall exposure, structured troubleshooting, software engineering projects, and technical training experience to solve problems with clarity and ownership.",
+    "Network Security Engineer with hands-on exposure to Palo Alto firewalls, Panorama, VPN, routing, DNS, GlobalProtect, and customer-focused security operations. I combine technical troubleshooting, MERN development experience, training ability, and calm critical-situation handling to deliver high-productivity, satisfaction-oriented resolutions.",
 };
 
 export const navLinks = [
@@ -60,15 +63,15 @@ export const socials = [
   },
   { label: "LeetCode", href: "https://leetcode.com/u/thezealott/", icon: Code2 },
   { label: "Instagram", href: "https://www.instagram.com/rakeshyadav_610/?hl=en", icon: Camera },
-  { label: "Email", href: "mailto:ry443197@gmail.com", icon: Mail },
+  { label: "Email", href: "mailto:rakesh528yadav@gmail.com", icon: Mail },
   { label: "GitHub Repo", href: "https://github.com/TheZealott01/My-porfolio", icon: Terminal },
 ];
 
 export const stats = [
   { value: 10, suffix: "+", label: "Palo Alto Certificates" },
   { value: 310, suffix: "", label: "LeetCode Rank" },
-  { value: 3, suffix: "+", label: "Career Domains" },
-  { value: 2, suffix: "", label: "Resume Projects" },
+  { value: 95, suffix: "+", label: "Security Skill Focus" },
+  { value: 3, suffix: "", label: "Core Projects" },
 ];
 
 export const journey = [
@@ -99,10 +102,10 @@ export const journey = [
   {
     title: "Network Security Engineer",
     eyebrow: "Cybersecurity",
-    date: "iOPEX / Opex",
+    date: "iOPEX Technologies",
     icon: ShieldCheck,
     copy:
-      "Moved into network security operations with hands-on exposure to routing, VLANs, DNS, Panorama, Next-Generation Firewalls, GlobalProtect, IPSec VPN, troubleshooting, and Palo Alto security learning paths.",
+      "Moved into network security operations with hands-on exposure to routing, VLANs, DNS, Panorama, Next-Generation Firewalls, GlobalProtect, IPSec VPN, critical customer handling, and satisfaction-oriented troubleshooting.",
   },
 ];
 
@@ -112,16 +115,17 @@ export const skillGroups = [
     icon: Shield,
     accent: "from-cyan-400 to-blue-500",
     skills: [
-      { name: "Palo Alto Firewall", level: 90, icon: ShieldCheck },
-      { name: "Next-Generation Firewall", level: 88, icon: Shield },
-      { name: "Panorama", level: 84, icon: Layers3 },
-      { name: "IPSec", level: 82, icon: LockKeyhole },
-      { name: "VPN", level: 86, icon: Wifi },
-      { name: "VLAN", level: 80, icon: Cable },
-      { name: "DNS", level: 78, icon: Network },
-      { name: "Routing", level: 84, icon: Router },
-      { name: "GlobalProtect", level: 82, icon: HardDrive },
-      { name: "Security Operations", level: 86, icon: Activity },
+      { name: "Palo Alto Firewall", level: 92, icon: ShieldCheck },
+      { name: "Next-Generation Firewall", level: 96, icon: Shield },
+      { name: "Panorama", level: 96, icon: Layers3 },
+      { name: "IPSec", level: 95, icon: LockKeyhole },
+      { name: "VPN", level: 95, icon: Wifi },
+      { name: "GlobalProtect", level: 96, icon: HardDrive },
+      { name: "User-ID", level: 91, icon: UsersRound },
+      { name: "VLAN", level: 89, icon: Cable },
+      { name: "DNS", level: 88, icon: Network },
+      { name: "Routing", level: 90, icon: Router },
+      { name: "Security Operations", level: 90, icon: Activity },
     ],
   },
   {
@@ -131,7 +135,11 @@ export const skillGroups = [
     skills: [
       { name: "Python", level: 88, icon: Code2 },
       { name: "DSA", level: 82, icon: BrainCircuit },
-      { name: "React.js", level: 80, icon: Laptop },
+      { name: "React.js", level: 86, icon: Laptop },
+      { name: "Node.js", level: 82, icon: Terminal },
+      { name: "Express.js", level: 82, icon: FileCode2 },
+      { name: "MongoDB", level: 80, icon: Database },
+      { name: "Mongoose", level: 80, icon: Database },
       { name: "Flask", level: 76, icon: Bot },
       { name: "SQL", level: 78, icon: Database },
       { name: "OpenCV", level: 74, icon: Camera },
@@ -180,19 +188,28 @@ export const experiences = [
   },
   {
     role: "Network Security Engineer",
-    company: "iOPEX / Opex",
+    company: "iOPEX Technologies",
     period: "Cybersecurity and network operations",
     icon: ShieldCheck,
     points: [
       "Worked on Palo Alto firewall concepts, Panorama management, and NGFW security operations.",
       "Handled routing, VLAN, DNS, VPN, and network troubleshooting scenarios.",
-      "Built working knowledge of IPSec VPN, GlobalProtect, SASE, Enterprise DLP, and cloud-delivered security services.",
-      "Strengthened incident-thinking, visibility, and policy-focused troubleshooting through Palo Alto learning paths.",
+      "Built working knowledge of IPSec VPN, GlobalProtect, User-ID, Enterprise DLP, and cloud-delivered security services.",
+      "Handled critical situations and frustrated customers with calm ownership, strong communication, and customer-satisfaction-oriented resolution.",
+      "Delivered high-productivity support by prioritizing impact, isolating root causes quickly, and keeping resolution quality consistent under pressure.",
     ],
   },
 ];
 
 export const projects = [
+  {
+    title: "Team Task Manager",
+    icon: UsersRound,
+    copy:
+      "A MERN-based productivity platform for planning projects, assigning work, and giving every owner clear visibility into what needs attention. It includes role-based access, secure authentication, assignment dashboards, task status tracking, deadline visibility, ownership mapping, and a focused interface for team coordination.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Mongoose"],
+    color: "from-emerald-500/30 via-cyan-500/20 to-slate-900",
+  },
   {
     title: "Real-Time Multi-Modal Transportation System",
     icon: Activity,
@@ -209,45 +226,13 @@ export const projects = [
     stack: ["Python", "OpenCV", "Computer Vision", "ML"],
     color: "from-purple-500/30 via-cyan-500/20 to-slate-900",
   },
-  {
-    title: "Firewall Log Analyzer",
-    icon: Shield,
-    copy:
-      "Python-based security utility concept for parsing firewall logs, highlighting suspicious activity, and turning raw security events into readable operational insights.",
-    stack: ["Python", "Security Logs", "Automation"],
-    color: "from-emerald-500/25 via-cyan-500/20 to-slate-900",
-  },
-  {
-    title: "Secure VPN Architecture",
-    icon: LockKeyhole,
-    copy:
-      "Reference architecture for IPSec VPN, segmentation, access control, and remote connectivity patterns aligned with network security operations.",
-    stack: ["IPSec", "VPN", "Network Security"],
-    color: "from-blue-500/30 via-purple-500/20 to-slate-900",
-  },
-  {
-    title: "Network Monitoring Dashboard",
-    icon: Network,
-    copy:
-      "Dashboard concept for network uptime, device health, alerts, and operational visibility, designed for fast triage and cleaner incident response.",
-    stack: ["React", "Monitoring", "Networking"],
-    color: "from-cyan-500/25 via-purple-500/20 to-slate-900",
-  },
-  {
-    title: "Network Automation Scripts",
-    icon: Terminal,
-    copy:
-      "Python automation concepts for repeatable network checks, configuration assistance, backups, and operational task reduction.",
-    stack: ["Python", "Automation", "CLI"],
-    color: "from-sky-500/30 via-emerald-500/20 to-slate-900",
-  },
 ];
 
 export const achievements = [
   {
     title: "iOPEX Futsal Tournament Winner",
     type: "Football / Futsal",
-    image: asset("assets/football-trophy-close.jpeg"),
+    image: asset("assets/football-winner-updated.jpeg"),
     icon: Trophy,
     copy:
       "Winning the iOPEX futsal tournament reflects competitive focus, discipline, team coordination, and the ability to perform under pressure. These same traits carry into security operations, where calm execution and teamwork matter.",

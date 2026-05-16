@@ -33,6 +33,7 @@ export default function Footer() {
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               aria-label={label}
+              title={label}
               className="icon-button"
             >
               <Icon className="h-5 w-5" />

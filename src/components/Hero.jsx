@@ -69,20 +69,25 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-start gap-4">
             {socials.map(({ label, href, icon: Icon }) => (
-              <motion.a
-                key={label}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noreferrer" : undefined}
-                aria-label={label}
-                className="icon-button"
-                whileHover={{ y: -4, rotate: -3 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Icon className="h-5 w-5" />
-              </motion.a>
+              <div key={label} className="grid justify-items-center gap-2">
+                <motion.a
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noreferrer" : undefined}
+                  aria-label={label}
+                  title={label}
+                  className="icon-button"
+                  whileHover={{ y: -4, rotate: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Icon className="h-5 w-5" />
+                </motion.a>
+                <span className="text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
+                  {label}
+                </span>
+              </div>
             ))}
           </div>
 

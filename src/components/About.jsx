@@ -29,9 +29,10 @@ export default function About() {
           </p>
           <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
             My current cybersecurity direction is focused on network security engineering, Palo Alto security concepts,
-            NGFW, Panorama, SASE, DLP, routing, VLAN, DNS, IPSec VPN, GlobalProtect, and structured troubleshooting.
-            I bring the mindset of a trainer, the discipline of an engineer, and the confidence of someone who enjoys
-            solving operational problems under pressure.
+            NGFW, Panorama, DLP, routing, VLAN, DNS, IPSec VPN, GlobalProtect, User-ID, and structured troubleshooting.
+            I also handle critical situations and frustrated customers with calm ownership, high productivity, and a
+            customer-satisfaction-oriented resolution mindset. I bring the mindset of a trainer, the discipline of an
+            engineer, and the confidence of someone who enjoys solving operational problems under pressure.
           </p>
         </GlowingCard>
 
