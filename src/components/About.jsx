@@ -9,28 +9,29 @@ export default function About() {
     <AnimatedSection id="about">
       <SectionHeading
         eyebrow="About Me"
-        title="A career built on teaching, leadership, and security operations."
-        copy="My journey has moved through classrooms, operations floors, and cybersecurity environments, giving me a practical understanding of both people and systems."
+        title="A career built on teaching, software thinking, leadership, and security operations."
+        copy="My journey brings together the rare combination recruiters value: strong fundamentals, clear communication, programming discipline, and hands-on network security growth."
       />
 
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <GlowingCard className="p-6 sm:p-8">
           <p className="text-lg leading-8 text-slate-700 dark:text-slate-200">
-            I graduated from PSIT Kanpur and began my professional path as a Technical Trainer, where I helped
-            students understand Computer Networks, Python Programming, and Data Structures & Algorithms through
-            practical, confidence-building sessions.
+            I graduated from PSIT Kanpur with a B.Tech in Computer Science and Engineering, building a strong base in
+            programming, computer networks, operating systems, DBMS, and analytical problem-solving. I began my
+            professional path as a Technical Trainer, where I trained students in Python and Data Structures & Algorithms
+            through practical, confidence-building sessions.
           </p>
           <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
-            That teaching foundation shaped the way I approach complex technical problems: break them down clearly,
-            communicate with precision, and focus on useful outcomes. I later joined RASA Consultancy as an Operations
-            Manager, handling coordination, workflows, team collaboration, and reporting before the role ended due to a
-            project ramp-down.
+            That training experience shaped my professional operating style: simplify complex systems, explain clearly,
+            execute with ownership, and keep the end user in mind. Alongside operations and coordination exposure at RASA
+            Consultancy, I strengthened my software engineering profile through React, Flask, SQL, and real-world project
+            work such as a multi-modal transportation platform.
           </p>
           <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
-            My next step at Opex brought me into network security engineering, where I worked with routing, VLAN, DNS,
-            Panorama, Next Generation Firewalls, GlobalProtect, IPSec VPN, troubleshooting, and security operations.
-            This mix of mentoring, operations leadership, and hands-on security work is the foundation I bring to every
-            team.
+            My current cybersecurity direction is focused on network security engineering, Palo Alto security concepts,
+            NGFW, Panorama, SASE, DLP, routing, VLAN, DNS, IPSec VPN, GlobalProtect, and structured troubleshooting.
+            I bring the mindset of a trainer, the discipline of an engineer, and the confidence of someone who enjoys
+            solving operational problems under pressure.
           </p>
         </GlowingCard>
 

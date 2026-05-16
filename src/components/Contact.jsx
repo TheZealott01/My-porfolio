@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, ShieldCheck } from "lucide-react";
-import { socials } from "../data/portfolio";
+import { profile, socials } from "../data/portfolio";
 import AnimatedSection from "./ui/AnimatedSection";
 import GlowingCard from "./ui/GlowingCard";
 import SectionHeading from "./ui/SectionHeading";
@@ -11,20 +11,20 @@ export default function Contact() {
       <SectionHeading
         eyebrow="Contact"
         title="Let's secure the next opportunity."
-        copy="Use this polished form layout as a frontend placeholder, then connect it to EmailJS, a backend endpoint, or your preferred form service."
+        copy="Recruiters, hiring teams, and collaborators can reach out for network security, cybersecurity operations, technical training, or software engineering opportunities."
       />
 
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <GlowingCard className="p-6 sm:p-8">
           <h3 className="text-2xl font-bold text-slate-950 dark:text-white">Contact details</h3>
           <p className="mt-4 leading-8 text-slate-600 dark:text-slate-300">
-            Available for cybersecurity, network security, technical training, and software engineering opportunities.
+            Available for roles where secure operations, troubleshooting discipline, communication, and strong technical ownership matter.
           </p>
 
           <div className="mt-8 space-y-4">
             <div className="contact-row">
               <Mail className="h-5 w-5 text-cyan-400" />
-              <span>rakesh@example.com</span>
+              <span>{profile.email}</span>
             </div>
             <div className="contact-row">
               <MapPin className="h-5 w-5 text-cyan-400" />
@@ -32,13 +32,21 @@ export default function Contact() {
             </div>
             <div className="contact-row">
               <ShieldCheck className="h-5 w-5 text-cyan-400" />
-              <span>Network Security Engineer - Opex</span>
+              <span>Network Security Engineer - iOPEX / Opex</span>
             </div>
           </div>
 
           <div className="mt-8 flex gap-3">
             {socials.map(({ label, href, icon: Icon }) => (
-              <motion.a key={label} href={href} aria-label={label} className="icon-button" whileHover={{ y: -4 }}>
+              <motion.a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                aria-label={label}
+                className="icon-button"
+                whileHover={{ y: -4 }}
+              >
                 <Icon className="h-5 w-5" />
               </motion.a>
             ))}
@@ -58,7 +66,7 @@ export default function Contact() {
             </label>
             <label className="field-label">
               Message
-              <textarea className="field-input min-h-36 resize-y" name="message" placeholder="Tell me about the role, project, or training requirement." />
+              <textarea className="field-input min-h-36 resize-y" name="message" placeholder="Tell me about the role, project, security requirement, or training opportunity." />
             </label>
             <motion.button type="button" className="primary-button w-full justify-center" whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }}>
               <Send className="h-5 w-5" />

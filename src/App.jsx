@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import About from "./components/About";
+import Achievements from "./components/Achievements";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import CursorGlow from "./components/ui/CursorGlow";
@@ -67,6 +68,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Achievements />
         <Certifications />
         <Education />
         <Contact />

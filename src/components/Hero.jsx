@@ -7,9 +7,8 @@ import {
   Mail,
   Network,
   Radar,
-  ShieldCheck,
 } from "lucide-react";
-import { socials, stats } from "../data/portfolio";
+import { profile, socials, stats } from "../data/portfolio";
 import StatCounter from "./ui/StatCounter";
 import TypingText from "./ui/TypingText";
 
@@ -52,13 +51,11 @@ export default function Hero() {
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
-            I build secure network operations, mentor technical learners, and bring a rare mix of cybersecurity,
-            programming education, and operations leadership to every problem I take on.
+            {profile.summary}
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            {/* Replace this placeholder path after uploading the final resume file. */}
-            <a href="/resume-placeholder.pdf" className="primary-button" download>
+            <a href={profile.resume} className="primary-button" download>
               <Download className="h-5 w-5" />
               Download Resume
             </a>
@@ -77,6 +74,8 @@ export default function Hero() {
               <motion.a
                 key={label}
                 href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
                 aria-label={label}
                 className="icon-button"
                 whileHover={{ y: -4, rotate: -3 }}
@@ -103,18 +102,20 @@ export default function Hero() {
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-emerald-400/10 blur-3xl" />
           <div className="profile-shell">
             <div className="scan-line" />
-            <div className="relative grid aspect-[4/5] place-items-center overflow-hidden rounded-[1.35rem] border border-white/10 bg-slate-950/70">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(34,211,238,0.22),transparent_32%),linear-gradient(135deg,rgba(14,165,233,0.16),rgba(168,85,247,0.12),rgba(34,197,94,0.09))]" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem] border border-white/10 bg-slate-950/70">
+              <img
+                src={profile.image}
+                alt="Rakesh Yadav professional profile"
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
               <div className="absolute inset-6 rounded-full border border-cyan-300/20" />
               <div className="absolute inset-14 rounded-full border border-purple-300/20" />
-              <div className="relative grid h-48 w-48 place-items-center rounded-full border border-cyan-300/25 bg-white/5 shadow-glow backdrop-blur sm:h-56 sm:w-56">
-                <ShieldCheck className="h-24 w-24 text-cyan-200" />
-              </div>
               <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-cyan-300/20 bg-slate-950/75 p-4 backdrop-blur-xl">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.24em] text-cyan-300">Profile Image</p>
-                    <p className="mt-1 text-sm text-slate-300">Upload placeholder ready</p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-cyan-300">Professional Profile</p>
+                    <p className="mt-1 text-sm text-slate-300">Network security, training, and engineering mindset</p>
                   </div>
                   <LockKeyhole className="h-8 w-8 text-emerald-300" />
                 </div>

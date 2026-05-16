@@ -8,14 +8,14 @@ export default function Education() {
     <AnimatedSection id="education" className="bg-slate-950/[0.02] dark:bg-white/[0.02]">
       <SectionHeading
         eyebrow="Education"
-        title="Academic foundation."
-        copy="A clean education timeline with placeholders for the exact passing year and percentage."
+        title="Academic foundation with measurable consistency."
+        copy="A computer science background supported by steady academic performance and practical skill development."
       />
-      <div className="mx-auto max-w-3xl">
-        {education.map((item) => {
+      <div className="mx-auto grid max-w-4xl gap-5">
+        {education.map((item, index) => {
           const Icon = item.icon;
           return (
-            <GlowingCard key={item.school} className="p-6 sm:p-8">
+            <GlowingCard key={item.school} className="p-6 sm:p-8" delay={index * 0.06}>
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
                 <div className="grid h-16 w-16 place-items-center rounded-lg bg-gradient-to-br from-cyan-300 to-emerald-300 text-slate-950 shadow-glow">
                   <Icon className="h-8 w-8" />

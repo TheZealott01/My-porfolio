@@ -9,8 +9,8 @@ export default function Projects() {
     <AnimatedSection id="projects" className="bg-slate-950/[0.02] dark:bg-white/[0.02]">
       <SectionHeading
         eyebrow="Projects"
-        title="Cybersecurity and engineering project concepts."
-        copy="Recruiter-friendly placeholders designed to be swapped with real repositories, live demos, screenshots, and case studies."
+        title="Resume-backed programming projects and security-focused builds."
+        copy="A mix of real software engineering work from the resume and cybersecurity project concepts that demonstrate practical thinking, system design, and operational awareness."
       />
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -35,13 +35,13 @@ export default function Projects() {
                 ))}
               </div>
               <div className="mt-6 flex gap-3">
-                <a href="https://github.com/" className="small-action">
+                <a href="https://github.com/TheZealott01/My-porfolio" target="_blank" rel="noreferrer" className="small-action">
                   <GitBranch className="h-4 w-4" />
                   GitHub
                 </a>
-                <a href="#home" className="small-action">
+                <a href="#contact" className="small-action">
                   <RadioTower className="h-4 w-4" />
-                  Live Demo
+                  Discuss
                 </a>
               </div>
             </GlowingCard>
