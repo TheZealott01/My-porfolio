@@ -30,11 +30,25 @@ import {
 } from "lucide-react";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+export const contactEmail = "rakesh528yadav@gmail.com";
+
+export const buildGmailComposeUrl = ({ subject = "", body = "" } = {}) => {
+  const params = new URLSearchParams({
+    view: "cm",
+    fs: "1",
+    to: contactEmail,
+  });
+
+  if (subject) params.set("su", subject);
+  if (body) params.set("body", body);
+
+  return `https://mail.google.com/mail/?${params.toString()}`;
+};
 
 // Edit this file first when replacing links, projects, skills, certificates, and images.
 export const profile = {
   name: "Rakesh Yadav",
-  email: "rakesh528yadav@gmail.com",
+  email: contactEmail,
   location: "Uttar Pradesh, India",
   role: "Network Security Engineer",
   company: "iOPEX Technologies",
@@ -59,12 +73,12 @@ export const socials = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/-rakeshyadav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    icon: BriefcaseBusiness,
+    brand: "linkedin",
   },
-  { label: "LeetCode", href: "https://leetcode.com/u/thezealott/", icon: Code2 },
-  { label: "Instagram", href: "https://www.instagram.com/rakeshyadav_610/?hl=en", icon: Camera },
-  { label: "Email", href: "mailto:rakesh528yadav@gmail.com", icon: Mail },
-  { label: "GitHub Repo", href: "https://github.com/TheZealott01/My-porfolio", icon: Terminal },
+  { label: "LeetCode", href: "https://leetcode.com/u/thezealott/", brand: "leetcode" },
+  { label: "Instagram", href: "https://www.instagram.com/rakeshyadav_610/?hl=en", brand: "instagram" },
+  { label: "Gmail", href: buildGmailComposeUrl(), brand: "gmail" },
+  { label: "GitHub", href: "https://github.com/TheZealott01/My-porfolio", brand: "github" },
 ];
 
 export const stats = [

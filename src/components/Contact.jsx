@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, ShieldCheck } from "lucide-react";
-import { profile, socials } from "../data/portfolio";
+import { MapPin, Send, ShieldCheck } from "lucide-react";
+import { buildGmailComposeUrl, profile, socials } from "../data/portfolio";
 import AnimatedSection from "./ui/AnimatedSection";
+import BrandIcon from "./ui/BrandIcon";
 import GlowingCard from "./ui/GlowingCard";
 import SectionHeading from "./ui/SectionHeading";
 
@@ -12,9 +13,10 @@ export default function Contact() {
     const name = form.get("name")?.toString().trim() || "Portfolio visitor";
     const email = form.get("email")?.toString().trim() || "Not provided";
     const message = form.get("message")?.toString().trim() || "No message provided.";
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+    window.location.href = buildGmailComposeUrl({
+      subject: `Portfolio inquiry from ${name}`,
+      body: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    });
   };
 
   return (
@@ -33,8 +35,14 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 space-y-4">
-            <a className="contact-row" href={`mailto:${profile.email}`} title={`Email ${profile.email}`}>
-              <Mail className="h-5 w-5 text-cyan-400" />
+            <a
+              className="contact-row"
+              href={buildGmailComposeUrl()}
+              target="_blank"
+              rel="noreferrer"
+              title={`Open Gmail compose for ${profile.email}`}
+            >
+              <BrandIcon brand="gmail" className="h-5 w-5" />
               <span>{profile.email}</span>
             </a>
             <div className="contact-row">
@@ -48,7 +56,7 @@ export default function Contact() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            {socials.map(({ label, href, icon: Icon }) => (
+            {socials.map(({ label, href, brand }) => (
               <div key={label} className="grid justify-items-center gap-2">
                 <motion.a
                   href={href}
@@ -59,7 +67,7 @@ export default function Contact() {
                   className="icon-button"
                   whileHover={{ y: -4 }}
                 >
-                  <Icon className="h-5 w-5" />
+                  <BrandIcon brand={brand} className="h-5 w-5" />
                 </motion.a>
                 <span className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
                   {label}

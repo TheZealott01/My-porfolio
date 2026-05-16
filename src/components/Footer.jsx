@@ -1,5 +1,5 @@
 import { Heart, ShieldCheck } from "lucide-react";
-import { navLinks, socials } from "../data/portfolio";
+import { navLinks } from "../data/portfolio";
 
 export default function Footer() {
   return (
@@ -21,22 +21,6 @@ export default function Footer() {
           {navLinks.map((item) => (
             <a key={item.href} href={item.href} className="rounded-full px-3 py-2 text-sm text-slate-600 transition hover:bg-cyan-300/10 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-200">
               {item.label}
-            </a>
-          ))}
-        </div>
-
-        <div className="flex gap-3">
-          {socials.map(({ label, href, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noreferrer" : undefined}
-              aria-label={label}
-              title={label}
-              className="icon-button"
-            >
-              <Icon className="h-5 w-5" />
             </a>
           ))}
         </div>

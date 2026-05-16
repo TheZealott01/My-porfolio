@@ -9,6 +9,7 @@ import {
   Radar,
 } from "lucide-react";
 import { profile, socials, stats } from "../data/portfolio";
+import BrandIcon from "./ui/BrandIcon";
 import StatCounter from "./ui/StatCounter";
 import TypingText from "./ui/TypingText";
 
@@ -70,7 +71,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-start gap-4">
-            {socials.map(({ label, href, icon: Icon }) => (
+            {socials.map(({ label, href, brand }) => (
               <div key={label} className="grid justify-items-center gap-2">
                 <motion.a
                   href={href}
@@ -82,7 +83,7 @@ export default function Hero() {
                   whileHover={{ y: -4, rotate: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Icon className="h-5 w-5" />
+                  <BrandIcon brand={brand} className="h-5 w-5" />
                 </motion.a>
                 <span className="text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
                   {label}
@@ -120,7 +121,7 @@ export default function Hero() {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-cyan-300">Professional Profile</p>
-                    <p className="mt-1 text-sm text-slate-300">Network security, training, and engineering mindset</p>
+                    <p className="mt-1 text-sm text-slate-300">Network Security, Trainer and Engineering Mindset</p>
                   </div>
                   <LockKeyhole className="h-8 w-8 text-emerald-300" />
                 </div>
