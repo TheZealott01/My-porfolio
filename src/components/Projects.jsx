@@ -35,7 +35,7 @@ export default function Projects() {
                 ))}
               </div>
               <div className="mt-6 flex gap-3">
-                <a href="https://github.com/TheZealott01/My-porfolio" target="_blank" rel="noreferrer" className="small-action">
+                <a href="https://github.com/TheZealott01?tab=repositories" target="_blank" rel="noreferrer" className="small-action">
                   <GitBranch className="h-4 w-4" />
                   GitHub
                 </a>

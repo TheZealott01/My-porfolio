@@ -78,7 +78,7 @@ export const socials = [
   { label: "LeetCode", href: "https://leetcode.com/u/thezealott/", brand: "leetcode" },
   { label: "Instagram", href: "https://www.instagram.com/rakeshyadav_610/?hl=en", brand: "instagram" },
   { label: "Gmail", href: buildGmailComposeUrl(), brand: "gmail" },
-  { label: "GitHub", href: "https://github.com/TheZealott01/My-porfolio", brand: "github" },
+  { label: "GitHub", href: "https://github.com/TheZealott01?tab=repositories", brand: "github" },
 ];
 
 export const stats = [
@@ -246,7 +246,7 @@ export const achievements = [
   {
     title: "iOPEX Futsal Tournament Winner",
     type: "Football / Futsal",
-    image: asset("assets/football-winner-updated.jpeg"),
+    image: asset("assets/football-trophy-close.jpeg"),
     icon: Trophy,
     copy:
       "Winning the iOPEX futsal tournament reflects competitive focus, discipline, team coordination, and the ability to perform under pressure. These same traits carry into security operations, where calm execution and teamwork matter.",
@@ -254,7 +254,7 @@ export const achievements = [
   {
     title: "Tournament Trophy Recognition",
     type: "Team Sports",
-    image: asset("assets/football-winner-full.jpeg"),
+    image: asset("assets/football-winner-updated.jpeg"),
     icon: Medal,
     copy:
       "The trophy moment represents consistency beyond technical work. It adds a human layer to the portfolio: a professional who values preparation, energy, and the confidence to show up when the stakes are visible.",
@@ -268,12 +268,20 @@ export const achievements = [
       "Cricket participation highlights patience, strategy, leadership, and match awareness. It reinforces a balanced personality with strong team instincts and a performance mindset.",
   },
   {
-    title: "Competitive Programming & NCC",
-    type: "Resume Highlights",
-    image: null,
+    title: "Competitive Programming",
+    type: "Python / DSA",
+    image: asset("assets/python-programming.png"),
     icon: BrainCircuit,
     copy:
-      "Ranked 310 in a LeetCode Biweekly Contest, achieved 2856 global rank in Google Hash Code Round A, earned HackerRank Python certification, and completed NCC C Certificate with A grade.",
+      "Ranked 310 in a LeetCode Biweekly Contest, achieved 2856 global rank in Google Hash Code Round A, and earned HackerRank Python certification. This reflects consistent problem-solving practice, Python confidence, and the ability to convert logic into clean, working solutions.",
+  },
+  {
+    title: "NCC C Certificate",
+    type: "NCC",
+    image: asset("assets/ncc-c-certificate.jpeg"),
+    icon: ShieldCheck,
+    copy:
+      "I gained the NCC C Certificate with dedication, discipline, regular training, and consistent commitment. NCC shaped my confidence, leadership, punctuality, physical endurance, and respect for teamwork. It taught me to stay calm under pressure, follow responsibility seriously, serve with integrity, and carry a service-minded attitude into professional life every day.",
   },
 ];
 

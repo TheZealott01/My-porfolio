@@ -12,7 +12,7 @@ export default function Achievements() {
         copy="A strong portfolio should show the person behind the professional. These highlights add the leadership, composure, and competitive mindset that recruiters remember."
       />
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
         {achievements.map((item, index) => {
           const Icon = item.icon;
           return (
