@@ -219,6 +219,7 @@ export const projects = [
   {
     title: "Team Task Manager",
     icon: UsersRound,
+    liveUrl: "https://project-task-manager-production-757e.up.railway.app",
     copy:
       "A MERN-based productivity platform for planning projects, assigning work, and giving every owner clear visibility into what needs attention. It includes role-based access, secure authentication, assignment dashboards, task status tracking, deadline visibility, ownership mapping, and a focused interface for team coordination.",
     stack: ["React", "Node.js", "Express", "MongoDB", "Mongoose"],

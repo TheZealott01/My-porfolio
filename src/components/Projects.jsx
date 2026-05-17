@@ -16,15 +16,30 @@ export default function Projects() {
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project, index) => {
           const Icon = project.icon;
+          const PreviewShell = project.liveUrl ? "a" : "div";
+          const previewProps = project.liveUrl
+            ? {
+                href: project.liveUrl,
+                target: "_blank",
+                rel: "noreferrer",
+                "aria-label": `Open ${project.title} live app`,
+              }
+            : {};
+
           return (
             <GlowingCard key={project.title} className="p-4" delay={index * 0.05}>
-              <div className={`relative mb-5 grid aspect-video place-items-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br ${project.color}`}>
+              <PreviewShell
+                {...previewProps}
+                className={`relative mb-5 grid aspect-video place-items-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br ${project.color} ${
+                  project.liveUrl ? "cursor-pointer transition hover:-translate-y-1 hover:border-cyan-200/60 hover:shadow-[0_0_34px_rgba(34,211,238,0.2)]" : ""
+                }`}
+              >
                 <div className="absolute inset-0 cyber-grid opacity-50" />
                 <div className="absolute left-4 top-4 rounded-md border border-cyan-300/20 bg-slate-950/60 px-3 py-1 text-xs uppercase tracking-[0.2em] text-cyan-200 backdrop-blur">
-                  Demo
+                  {project.liveUrl ? "Live" : "Demo"}
                 </div>
                 <Icon className="relative h-16 w-16 text-cyan-100 drop-shadow-[0_0_24px_rgba(34,211,238,0.55)]" />
-              </div>
+              </PreviewShell>
               <h3 className="text-xl font-bold text-slate-950 dark:text-white">{project.title}</h3>
               <p className="mt-3 min-h-20 leading-7 text-slate-600 dark:text-slate-300">{project.copy}</p>
               <div className="mt-5 flex flex-wrap gap-2">
