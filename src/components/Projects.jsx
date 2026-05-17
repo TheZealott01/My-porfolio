@@ -35,7 +35,13 @@ export default function Projects() {
                 }`}
               >
                 <div className="absolute inset-0 cyber-grid opacity-50" />
-                <div className="absolute left-4 top-4 rounded-md border border-cyan-300/20 bg-slate-950/60 px-3 py-1 text-xs uppercase tracking-[0.2em] text-cyan-200 backdrop-blur">
+                <div
+                  className={`absolute left-4 top-4 rounded-md px-3 py-1 text-xs font-black uppercase tracking-[0.2em] backdrop-blur ${
+                    project.liveUrl
+                      ? "border border-yellow-200/60 bg-red-600 text-yellow-100 shadow-[0_0_22px_rgba(239,68,68,0.45)]"
+                      : "border border-cyan-300/20 bg-slate-950/60 text-cyan-200"
+                  }`}
+                >
                   {project.liveUrl ? "Live" : "Demo"}
                 </div>
                 <Icon className="relative h-16 w-16 text-cyan-100 drop-shadow-[0_0_24px_rgba(34,211,238,0.55)]" />
